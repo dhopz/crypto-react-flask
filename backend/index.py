@@ -27,8 +27,7 @@ def token_history():
 
     response = requests.get(base_url, params=params)
     history = response.json()
-    time_series = history["Time Series (Digital Currency Daily)"]
-    #print(time_series)
+    time_series = history["Time Series (Digital Currency Daily)"]    
 
     for i in time_series.items():
             print(i[0], i[1]['4a. close (GBP)'])
