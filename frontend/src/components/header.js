@@ -7,11 +7,24 @@ const getTheDate = () => {
 
 class Header extends Component { 
 
+    inputChangeHandler(event, name){
+        console.log(event.target.value)
+        console.log(name)
+    }
+
     render(){
         return(
+            <header
+                onClick={ () => console.log("I was clicked")}
+            >
             <div>
                 {getTheDate()}
+                <input
+                    onChange={(e) => this.inputChangeHandler(e, 'this is something') }
+                />
             </div>
+
+            </header>
         )
     }
     
