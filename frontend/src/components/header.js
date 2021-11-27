@@ -7,12 +7,26 @@ const getTheDate = () => {
 
 class Header extends Component { 
 
-    inputChangeHandler(event, name){
-        console.log(event.target.value)
-        console.log(name)
+    state = {
+        name:"David",
+        keywords:'',
+        count: 0
+    }
+
+    inputChangeHandler = (event) => {
+        this.setState({
+            keywords: event.target.value
+        })
+    }
+
+    addOne(){
+        this.setState({count: this.state.count + 1})
     }
 
     render(){
+
+        console.log(this.state)
+
         return(
             <header
                 onClick={ () => console.log("I was clicked")}
@@ -20,8 +34,12 @@ class Header extends Component {
             <div>
                 {getTheDate()}
                 <input
-                    onChange={(e) => this.inputChangeHandler(e, 'this is something') }
+                    onChange={this.inputChangeHandler}
                 />
+                <div>{this.state.keywords}</div>
+            <br/>
+            <div>{this.state.count}</div>
+            <button onClick ={ () => this.addOne()}>Add One</button>
             </div>
 
             </header>
