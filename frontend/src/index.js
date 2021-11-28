@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import './styles/style.css'
 import JSON from './db.json'
 // import './index.css';
 // import App from './App';

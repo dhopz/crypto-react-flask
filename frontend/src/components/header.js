@@ -27,17 +27,19 @@ class Header extends Component {
 
         console.log(this.state)
 
-        return(            
-            <div>
-                {getTheDate()}
-                <input
-                    onChange={this.inputChangeHandler}
-                />
-                <div>{this.state.keywords}</div>
-            <br/>
-            <div>{this.state.count}</div>
-            <button onClick ={ () => this.addOne()}>Add One</button>
-            </div>
+        return(  
+            <header>         
+                <div>
+                    {getTheDate()}
+                    <input
+                        onChange={this.inputChangeHandler}
+                    />
+                    <div>{this.state.keywords}</div>
+                <br/>
+                <div>{this.state.count}</div>
+                <button onClick ={ () => this.addOne()}>Add One</button>
+                </div>
+            </header> 
 
         )
     }
