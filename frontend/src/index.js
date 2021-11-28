@@ -12,18 +12,33 @@ import NewsList from './components/news_list';
 class App extends Component {
 
   state = {
-    news:JSON
+    news:JSON,
+    filtered:JSON
+  }
+
+  getKeywords = (event) => {    
+    let keywords = event.target.value
+    let filtered = this.state.news.filter((item) =>{
+      return item.title.indexOf(keywords) > -1;
+    });
+
+    this.setState({
+      filtered
+    })
+
+    
   }
 
   render() {    
 
-    const {news} = this.state
+    const {news,filtered} = this.state
 
     return(
   <>
-    <Header/>
+    <Header
+      keywords={this.getKeywords}/>
     <NewsList
-      news={news}
+      news={filtered}
     />
   </>
   )
