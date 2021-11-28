@@ -17,13 +17,13 @@ class App extends Component {
 
   render() {    
 
+    const {news} = this.state
+
     return(
   <>
-    <h1>Hello</h1>
-    <h2>Hello number 2</h2>
     <Header/>
     <NewsList
-      news={this.state.news}
+      news={news}
     />
   </>
   )

@@ -8,13 +8,16 @@ const getTheDate = () => {
 class Header extends Component { 
 
     state = {
-        name:"David",
+        active: false,
         keywords:'',
         count: 0
     }
 
     inputChangeHandler = (event) => {
+        const value = event.target.value === ' ' ? false : true;
+
         this.setState({
+            active:value,
             keywords: event.target.value
         })
     }
@@ -25,11 +28,10 @@ class Header extends Component {
 
     render(){
 
-        console.log(this.state)
-
         return(  
-            <header>         
+            <header style={{background: `${this.state.active ? '#5b889e' : '#03a9fa'}`}}>         
                 <div>
+                <h1>Hello</h1>
                     {getTheDate()}
                     <input
                         onChange={this.inputChangeHandler}
