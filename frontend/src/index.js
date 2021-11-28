@@ -8,6 +8,7 @@ import JSON from './db.json'
 
 import Header from './components/header'
 import NewsList from './components/news_list';
+import TokenInformation from './components/TokenInformation';
 
 class App extends Component {
 
@@ -37,9 +38,11 @@ class App extends Component {
   <>
     <Header
       keywords={this.getKeywords}/>
-    <NewsList
+    {/* <NewsList
       news={filtered}
-    />
+    /> */}
+    <TokenInformation/>
+
   </>
   )
   }
