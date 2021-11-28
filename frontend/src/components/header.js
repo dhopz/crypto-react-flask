@@ -27,10 +27,7 @@ class Header extends Component {
 
         console.log(this.state)
 
-        return(
-            <header
-                onClick={ () => console.log("I was clicked")}
-            >
+        return(            
             <div>
                 {getTheDate()}
                 <input
@@ -42,7 +39,6 @@ class Header extends Component {
             <button onClick ={ () => this.addOne()}>Add One</button>
             </div>
 
-            </header>
         )
     }
     
