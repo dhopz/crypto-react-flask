@@ -25,7 +25,7 @@ export default function TokenInformation(props) {
 
     <div className="token-info-page">
 
-      <div className="container">
+      <div className="token-info-container">
       <h1>{`BTC Information`}</h1>
       
       <div className="stock">
